@@ -74,20 +74,7 @@ public class UserController {
 		
 	}
 
-	// @RequestMapping(value = "/settings/{userId}/{key}", method =
-	// RequestMethod.GET)
-	// public String getUserSetting(@PathVariable String userId, @PathVariable
-	// String key) {
-	// //User user = userRepository.findOne(userId);
-	// String setting = userDAL.getUserSetting(userId, key);
-	// LOG.info("Setting = "+setting);
-	// if (setting != null) {
-	// return setting;
-	// } else {
-	// return "Setting not found.";
-	// }
-	// }
-
+	
 	@RequestMapping(value = "/settings/{userId}/{key}", method = RequestMethod.GET)
 	public String getUserSetting(@PathVariable String userId, @PathVariable String key) {
 		return userDAL.getUserSetting(userId, key);
