@@ -15,7 +15,6 @@ public class MyCustomInterceptor implements HandlerInterceptor {
 	@Override
 	public void afterCompletion(HttpServletRequest arg0, HttpServletResponse arg1, Object arg2, Exception arg3)
 			throws Exception {
-		// TODO Auto-generated method stub
 		log.info("Inside the after completion" );
 
 	}
@@ -23,17 +22,15 @@ public class MyCustomInterceptor implements HandlerInterceptor {
 	@Override
 	public void postHandle(HttpServletRequest arg0, HttpServletResponse arg1, Object arg2, ModelAndView arg3)
 			throws Exception {
-		System.out.println("Inside the postHandle Handle method");
-		log.info("Got request to save data : name:" );
-		// TODO Auto-generated method stub
-
+		log.info("Inside the post handler...." );
+		
 	}
 
 	@Override
 	public boolean preHandle(HttpServletRequest req, HttpServletResponse res, Object arg2) throws Exception {
 		// TODO Auto-generated method stub
-		log.info("Got request to save data : name:" );
-		System.out.println("Got request to save data : name:" );
+		log.info("Got request to save data : name:"+ req.getContextPath());
+		
 		return true;
 	}
 
